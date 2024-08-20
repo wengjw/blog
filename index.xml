@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Congo</title>
+    <link>/</link>
+    <description>Recent content on Congo</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 20 Aug 2024 03:38:17 +0800</lastBuildDate>
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>第一篇日志</title>
+      <link>/articles/2024/08/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%97%A5%E5%BF%97/</link>
+      <pubDate>Mon, 19 Aug 2024 08:57:45 +0800</pubDate>
+      <guid>/articles/2024/08/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%97%A5%E5%BF%97/</guid>
+      <description>我的第一个Post。</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Sun, 18 Aug 2024 17:43:28 +0800</pubDate>
+      <guid>/about/</guid>
+      <description>关于我的信息。</description>
+    </item>
+    <item>
+      <title>替换了问题</title>
+      <link>/articles/2024/08/%E6%9B%BF%E6%8D%A2%E4%BA%86%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Mon, 19 Aug 2024 14:43:18 +0800</pubDate>
+      <guid>/articles/2024/08/%E6%9B%BF%E6%8D%A2%E4%BA%86%E9%97%AE%E9%A2%98/</guid>
+      <description>日志01修改</description>
+    </item>
+    <item>
+      <title>Images in Typora</title>
+      <link>/articles/2024/08/images-in-typora/</link>
+      <pubDate>Mon, 19 Aug 2024 15:34:22 +0800</pubDate>
+      <guid>/articles/2024/08/images-in-typora/</guid>
+      <description>第二篇日志</description>
+    </item>
+    <item>
+      <title>2024 08 01</title>
+      <link>/articles/2024/08/2024-08-01/</link>
+      <pubDate>Tue, 20 Aug 2024 03:37:40 +0800</pubDate>
+      <guid>/articles/2024/08/2024-08-01/</guid>
+      <description>今天是八一建军节。愿我们的祖国越来越强大！</description>
+    </item>
+    <item>
+      <title>日志01</title>
+      <link>/articles/2024/03/%E6%97%A5%E5%BF%9701/</link>
+      <pubDate>Mon, 19 Aug 2024 14:43:18 +0800</pubDate>
+      <guid>/articles/2024/03/%E6%97%A5%E5%BF%9701/</guid>
+      <description>日志01修改</description>
+    </item>
+    <item>
+      <title>四十一周岁生日</title>
+      <link>/articles/2023/03/%E5%9B%9B%E5%8D%81%E4%B8%80%E5%91%A8%E5%B2%81%E7%94%9F%E6%97%A5/</link>
+      <pubDate>Mon, 19 Aug 2024 15:40:23 +0800</pubDate>
+      <guid>/articles/2023/03/%E5%9B%9B%E5%8D%81%E4%B8%80%E5%91%A8%E5%B2%81%E7%94%9F%E6%97%A5/</guid>
+      <description>今天是我的四十一周岁生日。</description>
+    </item>
+  </channel>
+</rss>
