@@ -1,26 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Hugo on Congo</title>
-    <link>/tags/hugo/</link>
-    <description>Recent content in Hugo on Congo</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Tue, 20 Aug 2024 03:36:10 +0800</lastBuildDate>
-    <atom:link href="/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>替换了问题</title>
-      <link>/articles/2024/08/%E6%9B%BF%E6%8D%A2%E4%BA%86%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Mon, 19 Aug 2024 14:43:18 +0800</pubDate>
-      <guid>/articles/2024/08/%E6%9B%BF%E6%8D%A2%E4%BA%86%E9%97%AE%E9%A2%98/</guid>
-      <description>日志01修改</description>
-    </item>
-    <item>
-      <title>日志01</title>
-      <link>/articles/2024/03/%E6%97%A5%E5%BF%9701/</link>
-      <pubDate>Mon, 19 Aug 2024 14:43:18 +0800</pubDate>
-      <guid>/articles/2024/03/%E6%97%A5%E5%BF%9701/</guid>
-      <description>日志01修改</description>
-    </item>
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Hugo - Tag - 花间一壶酒的Blog（top level）</title>
+        <link>https://wengjw.netlify.app/tags/hugo/</link>
+        <description>Hugo - Tag - 花间一壶酒的Blog（top level）</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wengjw@msn.com (花间一壶酒)</managingEditor>
+            <webMaster>wengjw@msn.com (花间一壶酒)</webMaster><lastBuildDate>Wed, 21 Aug 2024 01:41:38 &#43;0800</lastBuildDate><atom:link href="https://wengjw.netlify.app/tags/hugo/" rel="self" type="application/rss+xml" /><item>
+    <title>第一篇Post</title>
+    <link>https://wengjw.netlify.app/posts/2024-08-19/</link>
+    <pubDate>Wed, 21 Aug 2024 01:41:38 &#43;0800</pubDate>
+    <author>花间一壶酒</author>
+    <guid>https://wengjw.netlify.app/posts/2024-08-19/</guid>
+    <description><![CDATA[这是采用Hugo搭建的静态Blog里的第一篇Blog。 采用了LoveIt主题，我很喜欢在这个主题。]]></description>
+</item>
+</channel>
 </rss>
