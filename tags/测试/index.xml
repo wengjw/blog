@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>测试 on 我的个人空间</title>
+    <link>http://localhost:1313/tags/%E6%B5%8B%E8%AF%95/</link>
+    <description>Recent content in 测试 on 我的个人空间</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 23 Aug 2024 03:44:02 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>测试</title>
+      <link>http://localhost:1313/posts/2024/08/01/</link>
+      <pubDate>Sun, 18 Aug 2024 03:41:11 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2024/08/01/</guid>
+      <description>今晚针对hugo和congo主题，做了很多测试。</description>
+    </item>
+  </channel>
+</rss>
