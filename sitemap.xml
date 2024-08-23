@@ -1,49 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
+  <sitemap>
+    <loc>http://localhost:1313/en/sitemap.xml</loc>
     
-      <url>
-            <loc>http://localhost:1313/posts/2024/08/18/</loc>
-            <lastmod>2024-08-23T03:34:40+08:00</lastmod>
-          </url>
+      <lastmod>2024-08-18T03:41:11+08:00</lastmod>
     
+  </sitemap>
   
+  <sitemap>
+    <loc>http://localhost:1313/fr/sitemap.xml</loc>
     
+  </sitemap>
   
+  <sitemap>
+    <loc>http://localhost:1313/fa/sitemap.xml</loc>
     
+  </sitemap>
   
-    
-  
-    
-  
-    
-  
-    
-      <url>
-            <loc>http://localhost:1313/posts/2024/08/01/</loc>
-            <lastmod>2024-08-23T03:44:02+08:00</lastmod>
-          </url>
-    
-  
-    
-  
-    
-      <url>
-            <loc>http://localhost:1313/</loc>
-            <lastmod>2024-08-23T02:22:50+08:00</lastmod>
-          </url>
-    
-  
-    
-      <url>
-            <loc>http://localhost:1313/posts/</loc>
-            <lastmod>2024-08-23T02:26:31+08:00</lastmod>
-          </url>
-    
-  
-    
-  
-    
-  
-</urlset>
+</sitemapindex>
