@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>标签 on PaperMod</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://diary.jw:2016/tags/</link>
     <description>Recent content in 标签 on PaperMod</description>
     <image>
       <title>PaperMod</title>
-      <url>http://localhost:1313/images/papermod-cover.png</url>
-      <link>http://localhost:1313/images/papermod-cover.png</link>
+      <url>https://diary.jw:2016/images/papermod-cover.png</url>
+      <link>https://diary.jw:2016/images/papermod-cover.png</link>
     </image>
     <generator>Hugo -- 0.133.0</generator>
     <language>en</language>
     <copyright>PaperMod Contributors</copyright>
     <lastBuildDate>Sun, 18 Aug 2024 03:41:11 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://diary.jw:2016/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>测试</title>
-      <link>http://localhost:1313/tags/%E6%B5%8B%E8%AF%95/</link>
+      <link>https://diary.jw:2016/tags/%E6%B5%8B%E8%AF%95/</link>
       <pubDate>Sun, 18 Aug 2024 03:41:11 +0800</pubDate>
-      <guid>http://localhost:1313/tags/%E6%B5%8B%E8%AF%95/</guid>
+      <guid>https://diary.jw:2016/tags/%E6%B5%8B%E8%AF%95/</guid>
       <description></description>
     </item>
     <item>
       <title>思齐</title>
-      <link>http://localhost:1313/tags/%E6%80%9D%E9%BD%90/</link>
+      <link>https://diary.jw:2016/tags/%E6%80%9D%E9%BD%90/</link>
       <pubDate>Thu, 09 Mar 2023 18:47:02 +0800</pubDate>
-      <guid>http://localhost:1313/tags/%E6%80%9D%E9%BD%90/</guid>
+      <guid>https://diary.jw:2016/tags/%E6%80%9D%E9%BD%90/</guid>
       <description></description>
     </item>
     <item>
       <title>慕凡</title>
-      <link>http://localhost:1313/tags/%E6%85%95%E5%87%A1/</link>
+      <link>https://diary.jw:2016/tags/%E6%85%95%E5%87%A1/</link>
       <pubDate>Thu, 09 Mar 2023 18:47:02 +0800</pubDate>
-      <guid>http://localhost:1313/tags/%E6%85%95%E5%87%A1/</guid>
+      <guid>https://diary.jw:2016/tags/%E6%85%95%E5%87%A1/</guid>
       <description></description>
     </item>
   </channel>

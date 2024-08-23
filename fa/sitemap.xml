@@ -2,27 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/fa/facategories/</loc>
+    <loc>https://diary.jw:2016/fa/facategories/</loc>
   </url><url>
-    <loc>http://localhost:1313/fa/faseries/</loc>
+    <loc>https://diary.jw:2016/fa/faseries/</loc>
   </url><url>
-    <loc>http://localhost:1313/fa/fatags/</loc>
+    <loc>https://diary.jw:2016/fa/fatags/</loc>
   </url><url>
-    <loc>http://localhost:1313/fa/</loc>
+    <loc>https://diary.jw:2016/fa/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/"
+                href="https://diary.jw:2016/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/fr/"
+                href="https://diary.jw:2016/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fa"
-                href="http://localhost:1313/fa/"
+                href="https://diary.jw:2016/fa/"
                 />
   </url>
 </urlset>
