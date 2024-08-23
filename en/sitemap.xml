@@ -2,59 +2,59 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://diary.jw:2016/</loc>
+    <loc>https://wengjw.netlify.app/</loc>
     <lastmod>2024-08-18T03:41:11+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://diary.jw:2016/fr/"
+                href="https://wengjw.netlify.app/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fa"
-                href="https://diary.jw:2016/fa/"
+                href="https://wengjw.netlify.app/fa/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://diary.jw:2016/"
+                href="https://wengjw.netlify.app/"
                 />
   </url><url>
-    <loc>https://diary.jw:2016/posts/</loc>
+    <loc>https://wengjw.netlify.app/posts/</loc>
     <lastmod>2024-08-18T03:41:11+08:00</lastmod>
   </url><url>
-    <loc>https://diary.jw:2016/categories/</loc>
+    <loc>https://wengjw.netlify.app/categories/</loc>
     <lastmod>2024-08-18T03:41:11+08:00</lastmod>
   </url><url>
-    <loc>https://diary.jw:2016/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/</loc>
+    <loc>https://wengjw.netlify.app/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/</loc>
     <lastmod>2024-08-18T03:41:11+08:00</lastmod>
   </url><url>
-    <loc>https://diary.jw:2016/tags/</loc>
+    <loc>https://wengjw.netlify.app/tags/</loc>
     <lastmod>2024-08-18T03:41:11+08:00</lastmod>
   </url><url>
-    <loc>https://diary.jw:2016/tags/%E6%B5%8B%E8%AF%95/</loc>
+    <loc>https://wengjw.netlify.app/tags/%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2024-08-18T03:41:11+08:00</lastmod>
   </url><url>
-    <loc>https://diary.jw:2016/posts/2024/2024-08-01/</loc>
+    <loc>https://wengjw.netlify.app/posts/2024/2024-08-01/</loc>
     <lastmod>2024-08-18T03:41:11+08:00</lastmod>
   </url><url>
-    <loc>https://diary.jw:2016/categories/%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>https://wengjw.netlify.app/categories/%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2023-03-09T18:47:02+08:00</lastmod>
   </url><url>
-    <loc>https://diary.jw:2016/tags/%E6%80%9D%E9%BD%90/</loc>
+    <loc>https://wengjw.netlify.app/tags/%E6%80%9D%E9%BD%90/</loc>
     <lastmod>2023-03-09T18:47:02+08:00</lastmod>
   </url><url>
-    <loc>https://diary.jw:2016/tags/%E6%85%95%E5%87%A1/</loc>
+    <loc>https://wengjw.netlify.app/tags/%E6%85%95%E5%87%A1/</loc>
     <lastmod>2023-03-09T18:47:02+08:00</lastmod>
   </url><url>
-    <loc>https://diary.jw:2016/categories/%E6%97%85%E8%A1%8C/</loc>
+    <loc>https://wengjw.netlify.app/categories/%E6%97%85%E8%A1%8C/</loc>
     <lastmod>2023-03-09T18:47:02+08:00</lastmod>
   </url><url>
-    <loc>https://diary.jw:2016/posts/2024/2024-08-18/</loc>
+    <loc>https://wengjw.netlify.app/posts/2024/2024-08-18/</loc>
     <lastmod>2023-03-09T18:47:02+08:00</lastmod>
   </url><url>
-    <loc>https://diary.jw:2016/series/</loc>
+    <loc>https://wengjw.netlify.app/series/</loc>
   </url><url>
-    <loc>https://diary.jw:2016/search/</loc>
+    <loc>https://wengjw.netlify.app/search/</loc>
   </url>
 </urlset>

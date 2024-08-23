@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>思齐 on PaperMod</title>
-    <link>https://diary.jw:2016/tags/%E6%80%9D%E9%BD%90/</link>
+    <link>https://wengjw.netlify.app/tags/%E6%80%9D%E9%BD%90/</link>
     <description>Recent content in 思齐 on PaperMod</description>
     <image>
       <title>PaperMod</title>
-      <url>https://diary.jw:2016/images/papermod-cover.png</url>
-      <link>https://diary.jw:2016/images/papermod-cover.png</link>
+      <url>https://wengjw.netlify.app/images/papermod-cover.png</url>
+      <link>https://wengjw.netlify.app/images/papermod-cover.png</link>
     </image>
     <generator>Hugo -- 0.133.0</generator>
     <language>en</language>
     <copyright>PaperMod Contributors</copyright>
     <lastBuildDate>Thu, 09 Mar 2023 18:47:02 +0800</lastBuildDate>
-    <atom:link href="https://diary.jw:2016/tags/%E6%80%9D%E9%BD%90/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://wengjw.netlify.app/tags/%E6%80%9D%E9%BD%90/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>第一篇日记</title>
-      <link>https://diary.jw:2016/posts/2024/2024-08-18/</link>
+      <link>https://wengjw.netlify.app/posts/2024/2024-08-18/</link>
       <pubDate>Thu, 09 Mar 2023 18:47:02 +0800</pubDate>
-      <guid>https://diary.jw:2016/posts/2024/2024-08-18/</guid>
+      <guid>https://wengjw.netlify.app/posts/2024/2024-08-18/</guid>
       <description>这是第一篇日记，今天带着思齐和慕凡去户外徒步。</description>
     </item>
   </channel>

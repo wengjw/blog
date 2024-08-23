@@ -2,27 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://diary.jw:2016/fr/frcategories/</loc>
+    <loc>https://wengjw.netlify.app/fr/frcategories/</loc>
   </url><url>
-    <loc>https://diary.jw:2016/fr/frseries/</loc>
+    <loc>https://wengjw.netlify.app/fr/frseries/</loc>
   </url><url>
-    <loc>https://diary.jw:2016/fr/frtags/</loc>
+    <loc>https://wengjw.netlify.app/fr/frtags/</loc>
   </url><url>
-    <loc>https://diary.jw:2016/fr/</loc>
+    <loc>https://wengjw.netlify.app/fr/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://diary.jw:2016/"
+                href="https://wengjw.netlify.app/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fa"
-                href="https://diary.jw:2016/fa/"
+                href="https://wengjw.netlify.app/fa/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://diary.jw:2016/fr/"
+                href="https://wengjw.netlify.app/fr/"
                 />
   </url>
 </urlset>
