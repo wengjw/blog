@@ -14,29 +14,11 @@
     <copyright>PaperMod Contributors</copyright>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>第一篇Post</title>
-      <link>/posts/2024/08/19/</link>
-      <pubDate>Wed, 21 Aug 2024 01:41:38 +0800</pubDate>
-      <guid>/posts/2024/08/19/</guid>
-      <description>[TOC] 我们 Test Just Before The war of milk
-主标题 1.创建大纲和目录的必要性 大纲 目录 2.使用的软件 typora markdown语法 3.怎么创建大纲和目录 怎么创建大纲 怎么创建目录 这是采用Hugo搭建的静态Blog里的第一篇Blog。
-采用了LoveIt主题，我很喜欢在这个主题。
-智能搜索英文内容
-just could search for English content.</description>
-    </item>
-    <item>
-      <title>第一篇日记</title>
-      <link>/posts/2024/08/18/</link>
-      <pubDate>Thu, 09 Mar 2023 18:47:02 +0800</pubDate>
-      <guid>/posts/2024/08/18/</guid>
-      <description>这是第一篇日记，今天带着思齐和慕凡去户外徒步。</description>
-    </item>
-    <item>
-      <title>测试</title>
-      <link>/posts/2024/08/01/</link>
-      <pubDate>Sun, 18 Aug 2024 03:41:11 +0800</pubDate>
-      <guid>/posts/2024/08/01/</guid>
-      <description>今晚针对hugo和congo主题，做了很多测试。</description>
+      <title>2024年08月24日</title>
+      <link>/posts/2024/08/24/</link>
+      <pubDate>Sat, 24 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>/posts/2024/08/24/</guid>
+      <description>忙到早上8点多，终于搞定了我的日志系统。最后采用PaperMod主题。</description>
     </item>
   </channel>
 </rss>

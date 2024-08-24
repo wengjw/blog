@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>测试 on 翁佳炜的个人空间</title>
-    <link>/tags/%E6%B5%8B%E8%AF%95/</link>
+    <link>//localhost:1313/tags/%E6%B5%8B%E8%AF%95/</link>
     <description>Recent content in 测试 on 翁佳炜的个人空间</description>
     <image>
       <title>翁佳炜的个人空间</title>
-      <url>/images/papermod-cover.png</url>
-      <link>/images/papermod-cover.png</link>
+      <url>//localhost:1313/images/papermod-cover.png</url>
+      <link>//localhost:1313/images/papermod-cover.png</link>
     </image>
     <generator>Hugo -- 0.133.0</generator>
     <language>zh</language>
     <copyright>PaperMod Contributors</copyright>
-    <lastBuildDate>Fri, 23 Aug 2024 03:44:02 +0800</lastBuildDate>
-    <atom:link href="/tags/%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Aug 2024 06:52:51 +0800</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>测试</title>
-      <link>/posts/2024/08/01/</link>
-      <pubDate>Sun, 18 Aug 2024 03:41:11 +0800</pubDate>
-      <guid>/posts/2024/08/01/</guid>
+      <link>//localhost:1313/posts/2024/08/01/</link>
+      <pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/2024/08/01/</guid>
       <description>今晚针对hugo和congo主题，做了很多测试。</description>
     </item>
   </channel>
