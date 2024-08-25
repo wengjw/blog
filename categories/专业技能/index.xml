@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
-    <title>所有文章 - 花间一壶酒的Blog</title>
-    <link>https://wengjw.netlify.app/posts/</link>
-    <description>所有文章 | 花间一壶酒的Blog</description>
+    <title>专业技能 - 分类 - 花间一壶酒的Blog</title>
+    <link>https://wengjw.netlify.app/categories/%E4%B8%93%E4%B8%9A%E6%8A%80%E8%83%BD/</link>
+    <description>专业技能 - 分类 | 花间一壶酒的Blog</description>
     <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wengjw@msn.com (翁佳炜)</managingEditor>
-      <webMaster>wengjw@msn.com (翁佳炜)</webMaster><atom:link href="https://wengjw.netlify.app/posts/" rel="self" type="application/rss+xml" /><item>
+      <webMaster>wengjw@msn.com (翁佳炜)</webMaster><lastBuildDate>Sun, 25 Aug 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://wengjw.netlify.app/categories/%E4%B8%93%E4%B8%9A%E6%8A%80%E8%83%BD/" rel="self" type="application/rss+xml" /><item>
   <title>2024年08月25日</title>
   <link>https://wengjw.netlify.app/posts/2024/08/25/</link>
   <pubDate>Sun, 25 Aug 2024 00:00:00 &#43;0000</pubDate>
