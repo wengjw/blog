@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>心得 - 标签 - 花间一壶酒的Blog</title>
+    <link>https://wengjw.netlify.app/tags/%E5%BF%83%E5%BE%97/</link>
+    <description>心得 - 标签 | 花间一壶酒的Blog</description>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wengjw@msn.com (翁佳炜)</managingEditor>
+      <webMaster>wengjw@msn.com (翁佳炜)</webMaster><lastBuildDate>Sun, 25 Aug 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://wengjw.netlify.app/tags/%E5%BF%83%E5%BE%97/" rel="self" type="application/rss+xml" /><item>
+  <title>2024年08月25日</title>
+  <link>https://wengjw.netlify.app/posts/2024/08/25/</link>
+  <pubDate>Sun, 25 Aug 2024 00:00:00 &#43;0000</pubDate>
+  <author>翁佳炜</author>
+  <guid>https://wengjw.netlify.app/posts/2024/08/25/</guid>
+  <description><![CDATA[这是一篇测试Blog。]]></description>
+</item>
+</channel>
+</rss>

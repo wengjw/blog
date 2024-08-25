@@ -1,25 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
-    <title>里程碑 on 翁佳炜的个人空间</title>
-    <link>/tags/%E9%87%8C%E7%A8%8B%E7%A2%91/</link>
-    <description>Recent content in 里程碑 on 翁佳炜的个人空间</description>
-    <image>
-      <title>翁佳炜的个人空间</title>
-      <url>/images/papermod-cover.png</url>
-      <link>/images/papermod-cover.png</link>
-    </image>
-    <generator>Hugo -- 0.133.0</generator>
-    <language>zh</language>
-    <copyright>PaperMod Contributors</copyright>
-    <lastBuildDate>Sat, 24 Aug 2024 08:20:35 +0800</lastBuildDate>
-    <atom:link href="/tags/%E9%87%8C%E7%A8%8B%E7%A2%91/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>2024年08月24日</title>
-      <link>/posts/2024/08/24/</link>
-      <pubDate>Sat, 24 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>/posts/2024/08/24/</guid>
-      <description>忙到早上8点多，终于搞定了我的日志系统。最后采用PaperMod主题。</description>
-    </item>
-  </channel>
+    <title>里程碑 - 标签 - 花间一壶酒的Blog</title>
+    <link>https://wengjw.netlify.app/tags/%E9%87%8C%E7%A8%8B%E7%A2%91/</link>
+    <description>里程碑 - 标签 | 花间一壶酒的Blog</description>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wengjw@msn.com (翁佳炜)</managingEditor>
+      <webMaster>wengjw@msn.com (翁佳炜)</webMaster><lastBuildDate>Sun, 25 Aug 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://wengjw.netlify.app/tags/%E9%87%8C%E7%A8%8B%E7%A2%91/" rel="self" type="application/rss+xml" /><item>
+  <title>2024年08月25日</title>
+  <link>https://wengjw.netlify.app/posts/2024/08/25/</link>
+  <pubDate>Sun, 25 Aug 2024 00:00:00 &#43;0000</pubDate>
+  <author>翁佳炜</author>
+  <guid>https://wengjw.netlify.app/posts/2024/08/25/</guid>
+  <description><![CDATA[这是一篇测试Blog。]]></description>
+</item>
+</channel>
 </rss>
