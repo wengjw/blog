@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>HTML5权威指南-学习笔记 - 花间一壶酒的Blog</title><meta name="author" content="翁佳炜">
+<meta name="description" content="第一部分 开篇第1章 HTML5背景知识HTML5不仅仅是HTML规范的最新版本，它还是一系列用来制作现代富web内容的相关技术。其中最重要的三项技术是：HTML5核心规范、CSS（Cascading Style Sheets，层叠样式表） HTML5 引入原生多媒体支持：浏览器可以直接播放视频和音频。 引入可编程内容：HTML5最大的变化之一就是添加了canvas元素（一个通用的绘图平面），开发人员可用它完成从前使用Flash才能完成的任务。编程成了HTML文档中第一层次的事情，这是一个重大转变。 引入语义Web：HTML5引入了一些用来分开元素的含义和呈现方式的特性和规则。开发者先标记内容，再定义其呈现方式。 可以使用Can I Use？网站查阅浏览器对HTML5特性的支持情况。也可以使用Modernizr网站提供的JavaScript库，以编程方式，动态检测浏览器的支持情况。 最权威的HTML5参考资料网站W3C，更具亲和力的(面向开发者的 Web 技术 | MDN (mozilla.org) 第2章 准备工作挑选浏览器：Google Chrome、Mozilla FireFox、Opera、Apple Safari、Microsoft Internet Explorer（wengjw注解：2012前后的那段时间，我最爱用的浏览器是Google的Chrome，但是由于它同步个人设置需要翻墙，所以我后来改用微软的新版浏览器Edge，新版Edge使用了与Chrome一样的内核，所以它甚至能够直接安装使用Chrome的插件，当然，随着多年来的发展，绝大多数Chrome插件都上架到Edge商店了，这样安装插件就更方便了） 挑选HTML编辑器：作者使用的是ActiveState的Komodo Edit，这是一款免费开源的编辑器，它对HTML的支持有其独到之处。 挑选Web服务器：任意Web服务器都行。之所以要使用Web服务器，因为如果HTML文档是从本机的磁盘上加载的话，有些特性表现会有所不同。 获取Node.js：本书中会写一些服务端脚本，作者不打算引入新的语言，所以采用Node.js。它让JavaScript可以在服务器端运行，从而脱离浏览器环境。 第3章 初探HTML使用元素元素名不区分大小写。 元素一般有三个部分：开始标签，结束标签，夹在两个标签中的元素内容。例如：&lt;code&gt;content&lt;/code&gt; 某些HTML元素会对呈现形式产生影响，但这些元素通常来自HTML的早期版本。用HTML元素来控制内容的呈现方式如今受到强烈的反对。现在的观点是应该用HTML元素来说明文档内容的结构和含义，用CSS控制内容的呈现方式。这类元素在浏览器中有默认的呈现样式，不过可以通过CSS改变其默认样式。 空元素：元素的开始标签和结束标签之间可以没有内容，没有内容的元素称为空元素。 自闭合标签：空元素可以简洁地用一个标签表示。例如：&lt;code/&gt; 虚元素：有些元素只能使用一个标签表示，在其中放置任何内容都不符合HTML规范。例如：hr元素 (它也是个具有呈现形式含义的元素，表示一条横线) 可以用单个开始标签表示虚元素：&lt;hr&gt; 也可以用空元素结构表示虚元素：&lt;hr/&gt; （作者更喜欢这种形式，我也更喜欢这种形式，记得上大学那会，学了一阵子的HTML4.0，也是XHTML1.0，特别强调应该用这种方式表示单个标签） 使用元素属性（attribute）属性只能用在开始标签或单个标签上，不能用于结束标签。 属性具有两个部分：名称和值。 全局属性和专有属性：全局属性可用于所有HTML元素，专有属性（局部属性）则是元素特有的属性。例如href属性就是a元素的专有属性。例如：I like &lt;a href=&quot;apples.html&quot;&gt;apples&lt;/a&gt; and oranges 一个元素可应用多个属性，这些属性使用一个或多个空格分隔。I like &lt;a class=&quot;link&quot; href=&quot;apples.html&quot; id=&quot;firstlink&quot;&gt;apples&lt;/a&gt; and oranges 布尔属性：这类属性不需要设定值，只要将属性名称添加到元素的标签中即可。例如：Enter your name：&lt;input disabled&gt;，也可以将它的属性值设置为空字符串或者属性名称字符串来达到同样的效果。例如：Enter your name：&lt;input disabled=&quot;&quot;&gt;或者Enter your name：&lt;input disabled=&quot;disabled&quot;&gt; 自定义属性：用户可以自定义属性（也叫：作者定义属性、扩展属性），这种属性名称必须添加data-前缀（添加前缀是为了避免与HTML的未来版本中可能增加的属性名冲突）。例如：Enter your name：&lt;input disabled data-creator=&quot;admin&quot; data-purpose=&quot;collection&quot;&gt; 创建HTML文档浏览器和用户代理、HTML和XHTML的对比（参见原书）"><meta name="keywords" content='HTML'>
+  <meta itemprop="name" content="HTML5权威指南-学习笔记">
+  <meta itemprop="description" content="第一部分 开篇第1章 HTML5背景知识HTML5不仅仅是HTML规范的最新版本，它还是一系列用来制作现代富web内容的相关技术。其中最重要的三项技术是：HTML5核心规范、CSS（Cascading Style Sheets，层叠样式表） HTML5 引入原生多媒体支持：浏览器可以直接播放视频和音频。 引入可编程内容：HTML5最大的变化之一就是添加了canvas元素（一个通用的绘图平面），开发人员可用它完成从前使用Flash才能完成的任务。编程成了HTML文档中第一层次的事情，这是一个重大转变。 引入语义Web：HTML5引入了一些用来分开元素的含义和呈现方式的特性和规则。开发者先标记内容，再定义其呈现方式。 可以使用Can I Use？网站查阅浏览器对HTML5特性的支持情况。也可以使用Modernizr网站提供的JavaScript库，以编程方式，动态检测浏览器的支持情况。 最权威的HTML5参考资料网站W3C，更具亲和力的(面向开发者的 Web 技术 | MDN (mozilla.org) 第2章 准备工作挑选浏览器：Google Chrome、Mozilla FireFox、Opera、Apple Safari、Microsoft Internet Explorer（wengjw注解：2012前后的那段时间，我最爱用的浏览器是Google的Chrome，但是由于它同步个人设置需要翻墙，所以我后来改用微软的新版浏览器Edge，新版Edge使用了与Chrome一样的内核，所以它甚至能够直接安装使用Chrome的插件，当然，随着多年来的发展，绝大多数Chrome插件都上架到Edge商店了，这样安装插件就更方便了） 挑选HTML编辑器：作者使用的是ActiveState的Komodo Edit，这是一款免费开源的编辑器，它对HTML的支持有其独到之处。 挑选Web服务器：任意Web服务器都行。之所以要使用Web服务器，因为如果HTML文档是从本机的磁盘上加载的话，有些特性表现会有所不同。 获取Node.js：本书中会写一些服务端脚本，作者不打算引入新的语言，所以采用Node.js。它让JavaScript可以在服务器端运行，从而脱离浏览器环境。 第3章 初探HTML使用元素元素名不区分大小写。 元素一般有三个部分：开始标签，结束标签，夹在两个标签中的元素内容。例如：&lt;code&gt;content&lt;/code&gt; 某些HTML元素会对呈现形式产生影响，但这些元素通常来自HTML的早期版本。用HTML元素来控制内容的呈现方式如今受到强烈的反对。现在的观点是应该用HTML元素来说明文档内容的结构和含义，用CSS控制内容的呈现方式。这类元素在浏览器中有默认的呈现样式，不过可以通过CSS改变其默认样式。 空元素：元素的开始标签和结束标签之间可以没有内容，没有内容的元素称为空元素。 自闭合标签：空元素可以简洁地用一个标签表示。例如：&lt;code/&gt; 虚元素：有些元素只能使用一个标签表示，在其中放置任何内容都不符合HTML规范。例如：hr元素 (它也是个具有呈现形式含义的元素，表示一条横线) 可以用单个开始标签表示虚元素：&lt;hr&gt; 也可以用空元素结构表示虚元素：&lt;hr/&gt; （作者更喜欢这种形式，我也更喜欢这种形式，记得上大学那会，学了一阵子的HTML4.0，也是XHTML1.0，特别强调应该用这种方式表示单个标签） 使用元素属性（attribute）属性只能用在开始标签或单个标签上，不能用于结束标签。 属性具有两个部分：名称和值。 全局属性和专有属性：全局属性可用于所有HTML元素，专有属性（局部属性）则是元素特有的属性。例如href属性就是a元素的专有属性。例如：I like &lt;a href=&#34;apples.html&#34;&gt;apples&lt;/a&gt; and oranges 一个元素可应用多个属性，这些属性使用一个或多个空格分隔。I like &lt;a class=&#34;link&#34; href=&#34;apples.html&#34; id=&#34;firstlink&#34;&gt;apples&lt;/a&gt; and oranges 布尔属性：这类属性不需要设定值，只要将属性名称添加到元素的标签中即可。例如：Enter your name：&lt;input disabled&gt;，也可以将它的属性值设置为空字符串或者属性名称字符串来达到同样的效果。例如：Enter your name：&lt;input disabled=&#34;&#34;&gt;或者Enter your name：&lt;input disabled=&#34;disabled&#34;&gt; 自定义属性：用户可以自定义属性（也叫：作者定义属性、扩展属性），这种属性名称必须添加data-前缀（添加前缀是为了避免与HTML的未来版本中可能增加的属性名冲突）。例如：Enter your name：&lt;input disabled data-creator=&#34;admin&#34; data-purpose=&#34;collection&#34;&gt; 创建HTML文档浏览器和用户代理、HTML和XHTML的对比（参见原书）">
+  <meta itemprop="datePublished" content="2024-09-03T11:47:04+00:00">
+  <meta itemprop="dateModified" content="2024-09-05T00:29:12+08:00">
+  <meta itemprop="wordCount" content="206">
+  <meta itemprop="keywords" content="HTML"><meta property="og:url" content="https://wengjw.netlify.app/posts/2024/09/03/">
+  <meta property="og:site_name" content="花间一壶酒的Blog">
+  <meta property="og:title" content="HTML5权威指南-学习笔记">
+  <meta property="og:description" content="第一部分 开篇第1章 HTML5背景知识HTML5不仅仅是HTML规范的最新版本，它还是一系列用来制作现代富web内容的相关技术。其中最重要的三项技术是：HTML5核心规范、CSS（Cascading Style Sheets，层叠样式表） HTML5 引入原生多媒体支持：浏览器可以直接播放视频和音频。 引入可编程内容：HTML5最大的变化之一就是添加了canvas元素（一个通用的绘图平面），开发人员可用它完成从前使用Flash才能完成的任务。编程成了HTML文档中第一层次的事情，这是一个重大转变。 引入语义Web：HTML5引入了一些用来分开元素的含义和呈现方式的特性和规则。开发者先标记内容，再定义其呈现方式。 可以使用Can I Use？网站查阅浏览器对HTML5特性的支持情况。也可以使用Modernizr网站提供的JavaScript库，以编程方式，动态检测浏览器的支持情况。 最权威的HTML5参考资料网站W3C，更具亲和力的(面向开发者的 Web 技术 | MDN (mozilla.org) 第2章 准备工作挑选浏览器：Google Chrome、Mozilla FireFox、Opera、Apple Safari、Microsoft Internet Explorer（wengjw注解：2012前后的那段时间，我最爱用的浏览器是Google的Chrome，但是由于它同步个人设置需要翻墙，所以我后来改用微软的新版浏览器Edge，新版Edge使用了与Chrome一样的内核，所以它甚至能够直接安装使用Chrome的插件，当然，随着多年来的发展，绝大多数Chrome插件都上架到Edge商店了，这样安装插件就更方便了） 挑选HTML编辑器：作者使用的是ActiveState的Komodo Edit，这是一款免费开源的编辑器，它对HTML的支持有其独到之处。 挑选Web服务器：任意Web服务器都行。之所以要使用Web服务器，因为如果HTML文档是从本机的磁盘上加载的话，有些特性表现会有所不同。 获取Node.js：本书中会写一些服务端脚本，作者不打算引入新的语言，所以采用Node.js。它让JavaScript可以在服务器端运行，从而脱离浏览器环境。 第3章 初探HTML使用元素元素名不区分大小写。 元素一般有三个部分：开始标签，结束标签，夹在两个标签中的元素内容。例如：&lt;code&gt;content&lt;/code&gt; 某些HTML元素会对呈现形式产生影响，但这些元素通常来自HTML的早期版本。用HTML元素来控制内容的呈现方式如今受到强烈的反对。现在的观点是应该用HTML元素来说明文档内容的结构和含义，用CSS控制内容的呈现方式。这类元素在浏览器中有默认的呈现样式，不过可以通过CSS改变其默认样式。 空元素：元素的开始标签和结束标签之间可以没有内容，没有内容的元素称为空元素。 自闭合标签：空元素可以简洁地用一个标签表示。例如：&lt;code/&gt; 虚元素：有些元素只能使用一个标签表示，在其中放置任何内容都不符合HTML规范。例如：hr元素 (它也是个具有呈现形式含义的元素，表示一条横线) 可以用单个开始标签表示虚元素：&lt;hr&gt; 也可以用空元素结构表示虚元素：&lt;hr/&gt; （作者更喜欢这种形式，我也更喜欢这种形式，记得上大学那会，学了一阵子的HTML4.0，也是XHTML1.0，特别强调应该用这种方式表示单个标签） 使用元素属性（attribute）属性只能用在开始标签或单个标签上，不能用于结束标签。 属性具有两个部分：名称和值。 全局属性和专有属性：全局属性可用于所有HTML元素，专有属性（局部属性）则是元素特有的属性。例如href属性就是a元素的专有属性。例如：I like &lt;a href=&#34;apples.html&#34;&gt;apples&lt;/a&gt; and oranges 一个元素可应用多个属性，这些属性使用一个或多个空格分隔。I like &lt;a class=&#34;link&#34; href=&#34;apples.html&#34; id=&#34;firstlink&#34;&gt;apples&lt;/a&gt; and oranges 布尔属性：这类属性不需要设定值，只要将属性名称添加到元素的标签中即可。例如：Enter your name：&lt;input disabled&gt;，也可以将它的属性值设置为空字符串或者属性名称字符串来达到同样的效果。例如：Enter your name：&lt;input disabled=&#34;&#34;&gt;或者Enter your name：&lt;input disabled=&#34;disabled&#34;&gt; 自定义属性：用户可以自定义属性（也叫：作者定义属性、扩展属性），这种属性名称必须添加data-前缀（添加前缀是为了避免与HTML的未来版本中可能增加的属性名冲突）。例如：Enter your name：&lt;input disabled data-creator=&#34;admin&#34; data-purpose=&#34;collection&#34;&gt; 创建HTML文档浏览器和用户代理、HTML和XHTML的对比（参见原书）">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-09-03T11:47:04+00:00">
+    <meta property="article:modified_time" content="2024-09-05T00:29:12+08:00">
+    <meta property="article:tag" content="HTML">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="HTML5权威指南-学习笔记">
+  <meta name="twitter:description" content="第一部分 开篇第1章 HTML5背景知识HTML5不仅仅是HTML规范的最新版本，它还是一系列用来制作现代富web内容的相关技术。其中最重要的三项技术是：HTML5核心规范、CSS（Cascading Style Sheets，层叠样式表） HTML5 引入原生多媒体支持：浏览器可以直接播放视频和音频。 引入可编程内容：HTML5最大的变化之一就是添加了canvas元素（一个通用的绘图平面），开发人员可用它完成从前使用Flash才能完成的任务。编程成了HTML文档中第一层次的事情，这是一个重大转变。 引入语义Web：HTML5引入了一些用来分开元素的含义和呈现方式的特性和规则。开发者先标记内容，再定义其呈现方式。 可以使用Can I Use？网站查阅浏览器对HTML5特性的支持情况。也可以使用Modernizr网站提供的JavaScript库，以编程方式，动态检测浏览器的支持情况。 最权威的HTML5参考资料网站W3C，更具亲和力的(面向开发者的 Web 技术 | MDN (mozilla.org) 第2章 准备工作挑选浏览器：Google Chrome、Mozilla FireFox、Opera、Apple Safari、Microsoft Internet Explorer（wengjw注解：2012前后的那段时间，我最爱用的浏览器是Google的Chrome，但是由于它同步个人设置需要翻墙，所以我后来改用微软的新版浏览器Edge，新版Edge使用了与Chrome一样的内核，所以它甚至能够直接安装使用Chrome的插件，当然，随着多年来的发展，绝大多数Chrome插件都上架到Edge商店了，这样安装插件就更方便了） 挑选HTML编辑器：作者使用的是ActiveState的Komodo Edit，这是一款免费开源的编辑器，它对HTML的支持有其独到之处。 挑选Web服务器：任意Web服务器都行。之所以要使用Web服务器，因为如果HTML文档是从本机的磁盘上加载的话，有些特性表现会有所不同。 获取Node.js：本书中会写一些服务端脚本，作者不打算引入新的语言，所以采用Node.js。它让JavaScript可以在服务器端运行，从而脱离浏览器环境。 第3章 初探HTML使用元素元素名不区分大小写。 元素一般有三个部分：开始标签，结束标签，夹在两个标签中的元素内容。例如：&lt;code&gt;content&lt;/code&gt; 某些HTML元素会对呈现形式产生影响，但这些元素通常来自HTML的早期版本。用HTML元素来控制内容的呈现方式如今受到强烈的反对。现在的观点是应该用HTML元素来说明文档内容的结构和含义，用CSS控制内容的呈现方式。这类元素在浏览器中有默认的呈现样式，不过可以通过CSS改变其默认样式。 空元素：元素的开始标签和结束标签之间可以没有内容，没有内容的元素称为空元素。 自闭合标签：空元素可以简洁地用一个标签表示。例如：&lt;code/&gt; 虚元素：有些元素只能使用一个标签表示，在其中放置任何内容都不符合HTML规范。例如：hr元素 (它也是个具有呈现形式含义的元素，表示一条横线) 可以用单个开始标签表示虚元素：&lt;hr&gt; 也可以用空元素结构表示虚元素：&lt;hr/&gt; （作者更喜欢这种形式，我也更喜欢这种形式，记得上大学那会，学了一阵子的HTML4.0，也是XHTML1.0，特别强调应该用这种方式表示单个标签） 使用元素属性（attribute）属性只能用在开始标签或单个标签上，不能用于结束标签。 属性具有两个部分：名称和值。 全局属性和专有属性：全局属性可用于所有HTML元素，专有属性（局部属性）则是元素特有的属性。例如href属性就是a元素的专有属性。例如：I like &lt;a href=&#34;apples.html&#34;&gt;apples&lt;/a&gt; and oranges 一个元素可应用多个属性，这些属性使用一个或多个空格分隔。I like &lt;a class=&#34;link&#34; href=&#34;apples.html&#34; id=&#34;firstlink&#34;&gt;apples&lt;/a&gt; and oranges 布尔属性：这类属性不需要设定值，只要将属性名称添加到元素的标签中即可。例如：Enter your name：&lt;input disabled&gt;，也可以将它的属性值设置为空字符串或者属性名称字符串来达到同样的效果。例如：Enter your name：&lt;input disabled=&#34;&#34;&gt;或者Enter your name：&lt;input disabled=&#34;disabled&#34;&gt; 自定义属性：用户可以自定义属性（也叫：作者定义属性、扩展属性），这种属性名称必须添加data-前缀（添加前缀是为了避免与HTML的未来版本中可能增加的属性名冲突）。例如：Enter your name：&lt;input disabled data-creator=&#34;admin&#34; data-purpose=&#34;collection&#34;&gt; 创建HTML文档浏览器和用户代理、HTML和XHTML的对比（参见原书）">
+<meta name="application-name" content="花间一壶酒的Blog">
+<meta name="apple-mobile-web-app-title" content="花间一壶酒的Blog"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://wengjw.netlify.app/posts/2024/09/03/" title="HTML5权威指南-学习笔记 - 花间一壶酒的Blog" /><link rel="alternate" type="text/markdown" href="https://wengjw.netlify.app/posts/2024/09/03/index.md" title="HTML5权威指南-学习笔记 - 花间一壶酒的Blog"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "HTML5权威指南-学习笔记",
+    "inLanguage": "zh-CN",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https:\/\/wengjw.netlify.app\/posts\/2024\/09\/03\/"
+    },"genre": "posts","keywords": "HTML","wordcount":  206 ,
+    "url": "https:\/\/wengjw.netlify.app\/posts\/2024\/09\/03\/","datePublished": "2024-09-03T11:47:04+00:00","dateModified": "2024-09-05T00:29:12+08:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "翁佳炜"
+      },"description": ""
+  }
+  </script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><script>(window.localStorage?.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('data-theme', 'dark');</script><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="花间一壶酒的Blog"><span class="header-title-text">花间一壶酒的Blog</span></a><span class="typeit header-subtitle"><template>人生得意须尽欢，莫使金樽空对月。</template></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/posts/"
+                
+                
+              ><i class="fa-solid fa-feather fa-fw fa-sm" aria-hidden="true"></i> 所有文章</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/categories/"
+                
+                
+              ><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> 分类</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/tags/"
+                
+                
+              ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 标签</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/archives/"
+                
+                
+              ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> 归档</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="搜索文章标题或内容……" id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="花间一壶酒的Blog"><span class="header-title-text">花间一壶酒的Blog</span></a><span class="typeit header-subtitle"><template>人生得意须尽欢，莫使金樽空对月。</template></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="搜索文章标题或内容……" id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              取消
+            </a>
+          </li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/posts/"
+                  
+                  
+                ><i class="fa-solid fa-feather fa-fw fa-sm" aria-hidden="true"></i> 所有文章</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/categories/"
+                  
+                  
+                ><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> 分类</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/tags/"
+                  
+                  
+                ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 标签</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/archives/"
+                  
+                  
+                ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> 归档</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="切换主题"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>HTML5权威指南-学习笔记</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><img loading="lazy" src="/img/author.png" alt="翁佳炜" data-title="翁佳炜" width="20" height="20" class="avatar" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&nbsp;翁佳炜</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category" title="分类 - 学习笔记"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 学习笔记</a></span></div><div class="post-meta-line"><span title="发布于 2024-09-03 11:47:04"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2024-09-03">2024-09-03</time></span>&nbsp;<span title="更新于 2024-09-05 00:29:12"><i class="fa-regular fa-calendar-check fa-fw me-1" aria-hidden="true"></i><time datetime="2024-09-05">2024-09-05</time></span>&nbsp;<span title="206 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 300 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 1 分钟</span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>目录</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#第一部分-开篇">第一部分 开篇</a>
+      <ul>
+        <li><a href="#第1章-html5背景知识">第1章 HTML5背景知识</a></li>
+        <li><a href="#第2章-准备工作">第2章 准备工作</a></li>
+        <li><a href="#第3章-初探html">第3章 初探HTML</a>
+          <ul>
+            <li><a href="#使用元素">使用元素</a></li>
+            <li><a href="#使用元素属性attribute">使用元素属性（attribute）</a></li>
+            <li><a href="#创建html文档">创建HTML文档</a></li>
+            <li><a href="#使用html实体">使用HTML实体</a></li>
+            <li><a href="#html5全局属性">HTML5全局属性</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><h2 id="第一部分-开篇" class="heading-element"><span>第一部分 开篇</span>
+  <a href="#%e7%ac%ac%e4%b8%80%e9%83%a8%e5%88%86-%e5%bc%80%e7%af%87" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h3 id="第1章-html5背景知识" class="heading-element"><span>第1章 HTML5背景知识</span>
+  <a href="#%e7%ac%ac1%e7%ab%a0-html5%e8%83%8c%e6%99%af%e7%9f%a5%e8%af%86" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ul>
+<li>HTML5不仅仅是HTML规范的最新版本，它还是一系列用来制作现代富web内容的相关技术。其中最重要的三项技术是：HTML5核心规范、CSS（Cascading Style Sheets，层叠样式表）</li>
+<li>HTML5
+<ul>
+<li>引入原生多媒体支持：浏览器可以直接播放视频和音频。</li>
+<li>引入可编程内容：HTML5最大的变化之一就是添加了canvas元素（一个通用的绘图平面），开发人员可用它完成从前使用Flash才能完成的任务。编程成了HTML文档中第一层次的事情，这是一个重大转变。</li>
+<li>引入语义Web：HTML5引入了一些用来分开元素的含义和呈现方式的特性和规则。开发者先标记内容，再定义其呈现方式。</li>
+<li>可以使用<a href="https://caniuse.com/"target="_blank" rel="external nofollow noopener noreferrer">Can I Use？</a>网站查阅浏览器对HTML5特性的支持情况。也可以使用<a href="https://modernizr.com/"target="_blank" rel="external nofollow noopener noreferrer">Modernizr</a>网站提供的JavaScript库，以编程方式，动态检测浏览器的支持情况。</li>
+<li>最权威的HTML5参考资料网站<a href="https://www.w3.org/"target="_blank" rel="external nofollow noopener noreferrer">W3C</a>，更具亲和力的(<a href="https://developer.mozilla.org/zh-CN/docs/Web"target="_blank" rel="external nofollow noopener noreferrer">面向开发者的 Web 技术 | MDN (mozilla.org)</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="第2章-准备工作" class="heading-element"><span>第2章 准备工作</span>
+  <a href="#%e7%ac%ac2%e7%ab%a0-%e5%87%86%e5%a4%87%e5%b7%a5%e4%bd%9c" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ul>
+<li>挑选浏览器：Google Chrome、Mozilla FireFox、Opera、Apple Safari、Microsoft Internet Explorer（wengjw注解：2012前后的那段时间，我最爱用的浏览器是Google的Chrome，但是由于它同步个人设置需要翻墙，所以我后来改用微软的新版浏览器Edge，新版Edge使用了与Chrome一样的内核，所以它甚至能够直接安装使用Chrome的插件，当然，随着多年来的发展，绝大多数Chrome插件都上架到Edge商店了，这样安装插件就更方便了）</li>
+<li>挑选HTML编辑器：作者使用的是ActiveState的Komodo Edit，这是一款免费开源的编辑器，它对HTML的支持有其独到之处。</li>
+<li>挑选Web服务器：任意Web服务器都行。之所以要使用Web服务器，因为如果HTML文档是从本机的磁盘上加载的话，有些特性表现会有所不同。</li>
+<li>获取Node.js：本书中会写一些服务端脚本，作者不打算引入新的语言，所以采用Node.js。它让JavaScript可以在服务器端运行，从而脱离浏览器环境。</li>
+</ul>
+<h3 id="第3章-初探html" class="heading-element"><span>第3章 初探HTML</span>
+  <a href="#%e7%ac%ac3%e7%ab%a0-%e5%88%9d%e6%8e%a2html" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ul>
+<li>
+<h4 id="使用元素" class="heading-element"><span>使用元素</span>
+  <a href="#%e4%bd%bf%e7%94%a8%e5%85%83%e7%b4%a0" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><ul>
+<li>元素名不区分大小写。</li>
+<li>元素一般有三个部分：开始标签，结束标签，夹在两个标签中的元素内容。例如：<code>&lt;code&gt;content&lt;/code&gt;</code></li>
+<li>某些HTML元素会对呈现形式产生影响，但这些元素通常来自HTML的早期版本。用HTML元素来控制内容的呈现方式如今受到强烈的反对。现在的观点是应该用HTML元素来说明文档内容的结构和含义，用CSS控制内容的呈现方式。这类元素在浏览器中有默认的呈现样式，不过可以通过CSS改变其默认样式。</li>
+<li>空元素：元素的开始标签和结束标签之间可以没有内容，没有内容的元素称为空元素。</li>
+<li>自闭合标签：空元素可以简洁地用一个标签表示。例如：<code>&lt;code/&gt;</code></li>
+<li>虚元素：有些元素只能使用一个标签表示，在其中放置任何内容都不符合HTML规范。例如：<code>hr</code>元素 (它也是个具有呈现形式含义的元素，表示一条横线)
+<ul>
+<li>可以用单个开始标签表示虚元素：<code>&lt;hr&gt;</code></li>
+<li>也可以用空元素结构表示虚元素：<code>&lt;hr/&gt;</code>  （作者更喜欢这种形式，我也更喜欢这种形式，记得上大学那会，学了一阵子的HTML4.0，也是XHTML1.0，特别强调应该用这种方式表示单个标签）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h4 id="使用元素属性attribute" class="heading-element"><span>使用元素属性（attribute）</span>
+  <a href="#%e4%bd%bf%e7%94%a8%e5%85%83%e7%b4%a0%e5%b1%9e%e6%80%a7attribute" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><ul>
+<li>属性只能用在开始标签或单个标签上，不能用于结束标签。</li>
+<li>属性具有两个部分：名称和值。</li>
+<li>全局属性和专有属性：全局属性可用于所有HTML元素，专有属性（局部属性）则是元素特有的属性。例如href属性就是a元素的专有属性。例如：<code>I like &lt;a href=&quot;apples.html&quot;&gt;apples&lt;/a&gt; and oranges</code></li>
+<li>一个元素可应用多个属性，这些属性使用一个或多个空格分隔。<code>I like &lt;a class=&quot;link&quot; href=&quot;apples.html&quot; id=&quot;firstlink&quot;&gt;apples&lt;/a&gt; and oranges</code></li>
+<li>布尔属性：这类属性不需要设定值，只要将属性名称添加到元素的标签中即可。例如：<code>Enter your name：&lt;input disabled&gt;</code>，也可以将它的属性值设置为空字符串或者属性名称字符串来达到同样的效果。例如：<code>Enter your name：&lt;input disabled=&quot;&quot;&gt;</code>或者<code>Enter your name：&lt;input disabled=&quot;disabled&quot;&gt;</code></li>
+<li>自定义属性：用户可以自定义属性（也叫：作者定义属性、扩展属性），这种属性名称必须添加<code>data-</code>前缀（添加前缀是为了避免与HTML的未来版本中可能增加的属性名冲突）。例如：<code>Enter your name：&lt;input disabled data-creator=&quot;admin&quot; data-purpose=&quot;collection&quot;&gt;</code></li>
+</ul>
+</li>
+<li>
+<h4 id="创建html文档" class="heading-element"><span>创建HTML文档</span>
+  <a href="#%e5%88%9b%e5%bb%bahtml%e6%96%87%e6%a1%a3" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><ul>
+<li>
+<p>浏览器和用户代理、HTML和XHTML的对比（参见原书）</p>
+</li>
+<li>
+<p>HTML文档的外层结构由两个元素确定：<code>DOCTYPE</code>和<code>html</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"> <span class="cp">&lt;!DOCTYPE HTML&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">     <span class="c">&lt;!-- elements go here --&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p>DOCTYPE元素中的HTML是一个布尔属性。</p>
+</li>
+<li>
+<p>HTML的注释以标签<code>&lt;!--</code>开头，以标签<code>--&gt;</code>结尾。浏览器会忽略这两个标签之间的一切内容。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>元数据：HTML文档的元数据可以向浏览器提供文档的一些信息。元数据包含在head元素内部。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"> <span class="cp">&lt;!DOCTYPE HTML&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">     <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">         <span class="c">&lt;!-- metadata goes here --&gt;</span>
+</span></span><span class="line"><span class="cl">         <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Example<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">     <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>内容：HTML文档的第三部分就是文档内容，它放在<code>body</code>元素之中。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"> <span class="cp">&lt;!DOCTYPE HTML&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">     <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">         <span class="c">&lt;!-- metadata goes here --&gt;</span>
+</span></span><span class="line"><span class="cl">         <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Example<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">     <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">     <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">         <span class="c">&lt;!-- content and elements go here --&gt;</span>
+</span></span><span class="line"><span class="cl">         I like <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>apples<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span> and oranges.
+</span></span><span class="line"><span class="cl">     <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>父元素、子元素、后代元素和兄弟元素</p>
+<ul>
+<li>父元素可以有多个子元素、子元素只能有一个父元素。</li>
+<li>子元素还可以拥有自己的子元素。子元素和它的子元素、它的子元素的子元素、都被称为后代元素。子元素是关系最近的后代元素。</li>
+<li>具有同一个父元素的子元素互为兄弟元素。</li>
+<li>一个元素能以什么样的元素为父元素或者子元素是有限制的，这些限制通过元素类型表现出来。</li>
+<li>元素之间关系的重要性在HTML中随处可见。
+<ul>
+<li>CSS圈定应用样式的元素的方法之一就要借助元素的父子关系。</li>
+<li>文档对象模型（DOM）也会涉及通过搜索文档树来查找文档中的某个元素，而文档树正是元素之间关系的一种表述。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>元素类型</p>
+<ul>
+<li>三大类型：
+<ul>
+<li>元数据元素(metadata element)：用来构建HTML文档的基本结构，以及就如何处理文档向浏览器提供信息和指示。</li>
+<li>短语元素(phrasing element)：短语元素是HTML的基本成分。</li>
+<li>流元素(flow element)：它用来确定元素合法的父元素和子元素范围。流元素是短语元素的超集，所有短语元素都是流元素，但不是所有流元素都是短语元素。</li>
+<li>还有一些元素无法归入上述三种类型：例如<code>li</code>元素。它表示列表项，只能有三种父元素：<code>ol</code>（有序列表）、<code>ul</code>（无序列表）、<code>menu</code>（菜单）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h4 id="使用html实体" class="heading-element"><span>使用HTML实体</span>
+  <a href="#%e4%bd%bf%e7%94%a8html%e5%ae%9e%e4%bd%93" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><ul>
+<li>实体就是浏览器用来替代特殊字符的一种代码。
+<ul>
+<li>HTML文档中有些字符具有特殊含义——最明显的就是<code>&lt;</code>和<code>&gt;</code>。有时候需要在文档中使用这些字符，但不想让它们作为HTML处理。这时就应该使用HTML实体(entity)。</li>
+<li>实体名称和实体编号：每个实体都有一个名称和编号。例如<code>&lt;</code>字符，它的实体名称是<code>&amp;lt;</code> ，实体编号是<code>&amp;#60;</code>。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h4 id="html5全局属性" class="heading-element"><span>HTML5全局属性</span>
+  <a href="#html5%e5%85%a8%e5%b1%80%e5%b1%9e%e6%80%a7" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><ul>
+<li>
+<p>元素特有的属性为局部属性，所有元素通用的属性为全局属性。</p>
+</li>
+<li>
+<p><code>accesskey</code>属性：可以设定一个或者几个用来选择页面元素的快捷键。触发accesskey机制的按键组合因平台而已，Windows系统是按下Alt键和accesskey属性值对应的键。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;password&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;password&#34;</span> <span class="na">accesskey</span><span class="o">=</span><span class="s">&#34;p&#34;</span><span class="p">/&gt;</span> 
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;Log In&#34;</span> <span class="na">accesskey</span><span class="o">=</span><span class="s">&#34;s&#34;</span><span class="p">/&gt;</span> </span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><code>class</code>属性：用来将元素归类。这样做通常是为了能够找出文档中的某一类元素或者为某一类元素应用CSS样式。</p>
+<ul>
+<li>一个元素可以被归入多个类别，只要在class属性值中提供多个用空格分隔的类名即可。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;class1 class2&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;http://apress.com&#34;</span><span class="p">&gt;</span>Apress web site<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span> 
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;class2 otherclass&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;http://w3c.org&#34;</span><span class="p">&gt;</span>W3C web site<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span> </span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="更新于 2024-09-05 00:29:12">更新于 2024-09-05&nbsp;</span>
+      </div><div class="post-info-license">
+            <span><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></span>
+          </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="/posts/2024/09/03/index.md" title="阅读原始文档" class="link-to-markdown">阅读原始文档</a></span></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="分享到 X" data-sharer="twitter" data-url="https://wengjw.netlify.app/posts/2024/09/03/" data-title="HTML5权威指南-学习笔记" data-hashtags="HTML"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://wengjw.netlify.app/posts/2024/09/03/" data-hashtag="HTML"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://wengjw.netlify.app/posts/2024/09/03/" data-title="HTML5权威指南-学习笔记"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/html/" class="post-tag" title="标签 - HTML">HTML</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    </section>
+  </div><div class="post-nav"></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="目录"><h2 class="toc-title">目录&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.133.0"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.11"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">
+              <a href="/">翁佳炜</a></span></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric">0%</span>
+        </div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
+  </noscript>
+</div><link rel="preload" href="/lib/katex/katex.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/katex/katex.min.css"></noscript><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/typeit/index.umd.js" defer></script><script src="/lib/katex/katex.min.js" defer></script><script src="/lib/katex/auto-render.min.js" defer></script><script src="/lib/katex/copy-tex.min.js" defer></script><script src="/lib/katex/mhchem.min.js" defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{"enable":false},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/search.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":true,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":1,"noResultsFound":"没有找到结果","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"typeit":{"cursorChar":"|","cursorSpeed":1000,"duration":-1,"loop":false,"speed":150},"version":"v0.3.11"};</script><script src="/js/theme.min.js" defer></script></body>
+</html>

@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>花间一壶酒的Blog</title>
+    <title>所有归档 - 花间一壶酒的Blog</title>
     <link>https://wengjw.netlify.app/archives/</link>
-    <description>Recent content on 花间一壶酒的Blog</description>
-    <generator>Hugo</generator>
+    <description>花间一壶酒的Blog</description>
+    <generator>Hugo 0.133.0 &amp; FixIt v0.3.11</generator>
     <language>zh-CN</language>
-    <managingEditor>wengjw@msn.com (翁佳炜)</managingEditor>
-    <webMaster>wengjw@msn.com (翁佳炜)</webMaster>
+    <lastBuildDate></lastBuildDate>
     <atom:link href="https://wengjw.netlify.app/archives/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>所有文章 - 花间一壶酒的Blog</title>
-    <link>https://wengjw.netlify.app/posts/</link>
+    <title>学习笔记 - 分类 - 花间一壶酒的Blog</title>
+    <link>https://wengjw.netlify.app/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
     <description>花间一壶酒的Blog</description>
     <generator>Hugo 0.133.0 &amp; FixIt v0.3.11</generator>
     <language>zh-CN</language>
     <lastBuildDate>Thu, 05 Sep 2024 00:29:12 +0800</lastBuildDate>
-    <atom:link href="https://wengjw.netlify.app/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://wengjw.netlify.app/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HTML5权威指南-学习笔记</title>
       <link>https://wengjw.netlify.app/posts/2024/09/03/</link>

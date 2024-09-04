@@ -1,0 +1,141 @@
+# HTML5权威指南-学习笔记
+
+
+## 第一部分 开篇
+
+### 第1章 HTML5背景知识
+
+- HTML5不仅仅是HTML规范的最新版本，它还是一系列用来制作现代富web内容的相关技术。其中最重要的三项技术是：HTML5核心规范、CSS（Cascading Style Sheets，层叠样式表）
+- HTML5
+  - 引入原生多媒体支持：浏览器可以直接播放视频和音频。
+  - 引入可编程内容：HTML5最大的变化之一就是添加了canvas元素（一个通用的绘图平面），开发人员可用它完成从前使用Flash才能完成的任务。编程成了HTML文档中第一层次的事情，这是一个重大转变。
+  - 引入语义Web：HTML5引入了一些用来分开元素的含义和呈现方式的特性和规则。开发者先标记内容，再定义其呈现方式。
+  - 可以使用[Can I Use？](https://caniuse.com/)网站查阅浏览器对HTML5特性的支持情况。也可以使用[Modernizr](https://modernizr.com/)网站提供的JavaScript库，以编程方式，动态检测浏览器的支持情况。
+  - 最权威的HTML5参考资料网站[W3C](https://www.w3.org/)，更具亲和力的([面向开发者的 Web 技术 | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web)
+
+### 第2章 准备工作
+
+- 挑选浏览器：Google Chrome、Mozilla FireFox、Opera、Apple Safari、Microsoft Internet Explorer（wengjw注解：2012前后的那段时间，我最爱用的浏览器是Google的Chrome，但是由于它同步个人设置需要翻墙，所以我后来改用微软的新版浏览器Edge，新版Edge使用了与Chrome一样的内核，所以它甚至能够直接安装使用Chrome的插件，当然，随着多年来的发展，绝大多数Chrome插件都上架到Edge商店了，这样安装插件就更方便了）
+- 挑选HTML编辑器：作者使用的是ActiveState的Komodo Edit，这是一款免费开源的编辑器，它对HTML的支持有其独到之处。
+- 挑选Web服务器：任意Web服务器都行。之所以要使用Web服务器，因为如果HTML文档是从本机的磁盘上加载的话，有些特性表现会有所不同。
+- 获取Node.js：本书中会写一些服务端脚本，作者不打算引入新的语言，所以采用Node.js。它让JavaScript可以在服务器端运行，从而脱离浏览器环境。
+
+### 第3章 初探HTML
+
+- #### 使用元素
+
+  - 元素名不区分大小写。
+  - 元素一般有三个部分：开始标签，结束标签，夹在两个标签中的元素内容。例如：`&lt;code&gt;content&lt;/code&gt;`
+  - 某些HTML元素会对呈现形式产生影响，但这些元素通常来自HTML的早期版本。用HTML元素来控制内容的呈现方式如今受到强烈的反对。现在的观点是应该用HTML元素来说明文档内容的结构和含义，用CSS控制内容的呈现方式。这类元素在浏览器中有默认的呈现样式，不过可以通过CSS改变其默认样式。
+  - 空元素：元素的开始标签和结束标签之间可以没有内容，没有内容的元素称为空元素。
+  - 自闭合标签：空元素可以简洁地用一个标签表示。例如：`&lt;code/&gt;`
+  - 虚元素：有些元素只能使用一个标签表示，在其中放置任何内容都不符合HTML规范。例如：`hr`元素 (它也是个具有呈现形式含义的元素，表示一条横线)
+    - 可以用单个开始标签表示虚元素：`&lt;hr&gt;`
+    - 也可以用空元素结构表示虚元素：`&lt;hr/&gt;`  （作者更喜欢这种形式，我也更喜欢这种形式，记得上大学那会，学了一阵子的HTML4.0，也是XHTML1.0，特别强调应该用这种方式表示单个标签）
+
+- #### 使用元素属性（attribute）
+
+  - 属性只能用在开始标签或单个标签上，不能用于结束标签。
+  - 属性具有两个部分：名称和值。
+  - 全局属性和专有属性：全局属性可用于所有HTML元素，专有属性（局部属性）则是元素特有的属性。例如href属性就是a元素的专有属性。例如：`I like &lt;a href=&#34;apples.html&#34;&gt;apples&lt;/a&gt; and oranges`
+  - 一个元素可应用多个属性，这些属性使用一个或多个空格分隔。`I like &lt;a class=&#34;link&#34; href=&#34;apples.html&#34; id=&#34;firstlink&#34;&gt;apples&lt;/a&gt; and oranges`
+  - 布尔属性：这类属性不需要设定值，只要将属性名称添加到元素的标签中即可。例如：`Enter your name：&lt;input disabled&gt;`，也可以将它的属性值设置为空字符串或者属性名称字符串来达到同样的效果。例如：`Enter your name：&lt;input disabled=&#34;&#34;&gt;`或者`Enter your name：&lt;input disabled=&#34;disabled&#34;&gt;`
+  - 自定义属性：用户可以自定义属性（也叫：作者定义属性、扩展属性），这种属性名称必须添加`data-`前缀（添加前缀是为了避免与HTML的未来版本中可能增加的属性名冲突）。例如：`Enter your name：&lt;input disabled data-creator=&#34;admin&#34; data-purpose=&#34;collection&#34;&gt;`
+
+- #### 创建HTML文档
+
+  - 浏览器和用户代理、HTML和XHTML的对比（参见原书）
+
+  - HTML文档的外层结构由两个元素确定：`DOCTYPE`和`html`。
+
+     ```html
+      &lt;!DOCTYPE HTML&gt;
+      &lt;html&gt;
+          &lt;!-- elements go here --&gt;
+      &lt;/html&gt;
+     ```
+
+    - DOCTYPE元素中的HTML是一个布尔属性。
+
+    - HTML的注释以标签`&lt;!--`开头，以标签`--&gt;`结尾。浏览器会忽略这两个标签之间的一切内容。
+
+  - 元数据：HTML文档的元数据可以向浏览器提供文档的一些信息。元数据包含在head元素内部。
+
+     ```html
+      &lt;!DOCTYPE HTML&gt;
+      &lt;html&gt;
+          &lt;head&gt;
+              &lt;!-- metadata goes here --&gt;
+              &lt;title&gt;Example&lt;/title&gt;
+          &lt;/head&gt;
+      &lt;/html&gt;
+     ```
+
+  - 内容：HTML文档的第三部分就是文档内容，它放在`body`元素之中。
+
+     ```html
+      &lt;!DOCTYPE HTML&gt;
+      &lt;html&gt;
+          &lt;head&gt;
+              &lt;!-- metadata goes here --&gt;
+              &lt;title&gt;Example&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+              &lt;!-- content and elements go here --&gt;
+              I like &lt;code&gt;apples&lt;/code&gt; and oranges.
+          &lt;/body&gt;
+      &lt;/html&gt;
+     ```
+
+  - 父元素、子元素、后代元素和兄弟元素
+
+    - 父元素可以有多个子元素、子元素只能有一个父元素。
+    - 子元素还可以拥有自己的子元素。子元素和它的子元素、它的子元素的子元素、都被称为后代元素。子元素是关系最近的后代元素。
+    - 具有同一个父元素的子元素互为兄弟元素。
+    - 一个元素能以什么样的元素为父元素或者子元素是有限制的，这些限制通过元素类型表现出来。
+    - 元素之间关系的重要性在HTML中随处可见。
+      - CSS圈定应用样式的元素的方法之一就要借助元素的父子关系。
+      - 文档对象模型（DOM）也会涉及通过搜索文档树来查找文档中的某个元素，而文档树正是元素之间关系的一种表述。
+
+  - 元素类型
+
+    - 三大类型：
+      - 元数据元素(metadata element)：用来构建HTML文档的基本结构，以及就如何处理文档向浏览器提供信息和指示。
+      - 短语元素(phrasing element)：短语元素是HTML的基本成分。
+      - 流元素(flow element)：它用来确定元素合法的父元素和子元素范围。流元素是短语元素的超集，所有短语元素都是流元素，但不是所有流元素都是短语元素。
+      - 还有一些元素无法归入上述三种类型：例如`li`元素。它表示列表项，只能有三种父元素：`ol`（有序列表）、`ul`（无序列表）、`menu`（菜单）
+
+- #### 使用HTML实体
+
+  - 实体就是浏览器用来替代特殊字符的一种代码。
+    - HTML文档中有些字符具有特殊含义——最明显的就是`&lt;`和`&gt;`。有时候需要在文档中使用这些字符，但不想让它们作为HTML处理。这时就应该使用HTML实体(entity)。
+    - 实体名称和实体编号：每个实体都有一个名称和编号。例如`&lt;`字符，它的实体名称是`&amp;lt;` ，实体编号是`&amp;#60;`。
+
+- #### HTML5全局属性
+
+  - 元素特有的属性为局部属性，所有元素通用的属性为全局属性。
+
+  - `accesskey`属性：可以设定一个或者几个用来选择页面元素的快捷键。触发accesskey机制的按键组合因平台而已，Windows系统是按下Alt键和accesskey属性值对应的键。
+
+    ```html
+    &lt;input type=&#34;password&#34; name=&#34;password&#34; accesskey=&#34;p&#34;/&gt; 
+    &lt;input type=&#34;submit&#34; value=&#34;Log In&#34; accesskey=&#34;s&#34;/&gt; 
+    ```
+
+  - `class`属性：用来将元素归类。这样做通常是为了能够找出文档中的某一类元素或者为某一类元素应用CSS样式。
+
+    - 一个元素可以被归入多个类别，只要在class属性值中提供多个用空格分隔的类名即可。
+  
+    ```html
+     &lt;a class=&#34;class1 class2&#34; href=&#34;http://apress.com&#34;&gt;Apress web site&lt;/a&gt; 
+     &lt;a class=&#34;class2 otherclass&#34; href=&#34;http://w3c.org&#34;&gt;W3C web site&lt;/a&gt; 
+    ```
+  
+
+
+
+---
+
+> 作者: 翁佳炜  
+> URL: https://wengjw.netlify.app/posts/2024/09/03/  
+

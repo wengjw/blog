@@ -1,24 +1,0 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-  <channel>
-    <title>Markdown - 标签 - 花间一壶酒的Blog</title>
-    <link>https://wengjw.netlify.app/tags/markdown/</link>
-    <description>Markdown - 标签 | 花间一壶酒的Blog</description>
-    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wengjw@msn.com (翁佳炜)</managingEditor>
-      <webMaster>wengjw@msn.com (翁佳炜)</webMaster><lastBuildDate>Sun, 25 Aug 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://wengjw.netlify.app/tags/markdown/" rel="self" type="application/rss+xml" /><item>
-  <title>2024年08月25日</title>
-  <link>https://wengjw.netlify.app/posts/2024/08/25/</link>
-  <pubDate>Sun, 25 Aug 2024 00:00:00 &#43;0000</pubDate>
-  <author>翁佳炜</author>
-  <guid>https://wengjw.netlify.app/posts/2024/08/25/</guid>
-  <description><![CDATA[注：这仅仅是一个测试。这篇Blog的内容来自于Adobe公司网站关于Markdown的技术文档。
-如何使用 Markdown 编写技术文档最近更新： 2024年7月15日
-Adobe 技术文档文章以名为 Markdown 的轻量级标记语言编写，这种方式易于阅读且易于学习。
-当我们在 GitHub 中存储 Adobe Docs 内容时，该内容可以使用名为 GitHub Flavored Markdown (GFM) 的 Markdown 版本，该版本提供了额外的功能，可满足常见的格式需求。此外，Adobe 还通过几种方式扩展了 Markdown，以支持某些与帮助相关的功能，如备注、提示和嵌入式视频。
-Markdown 基础知识以下部分介绍了使用 Markdown 进行创作的基础知识。
-标题要创建标题，请在行首使用井号 (#)：
-1 2 3 4 5 # This is level 1 (article title) ## This is level 2 ### This is level 3 #### This is level 4 ##### This is level 5 Copy
-Toggle Text Wrapping
-基本文本Markdown 中的段落不需要特殊语法。]]></description>
-</item>
-</channel>
-</rss>
